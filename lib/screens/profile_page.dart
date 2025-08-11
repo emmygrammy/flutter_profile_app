@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:profile_app/screens/work_page.dart';
 import 'package:profile_app/text%20style/my_text.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -54,6 +55,8 @@ class _ProfilePageState extends State<ProfilePage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           MyText.h1("Emily Nelson",
+                          
+
                             color: Color(0xFF79838B),
                           ),
                           SizedBox(height: 5),
@@ -137,8 +140,17 @@ class _ProfilePageState extends State<ProfilePage> {
                       
                         // padding: EdgeInsets.all(8),
                         child: Center(
-                          child: MyText.h3("WORK",
-                          color: Color(0xFF44C4FE),
+                          child: GestureDetector(
+                            onTap: (){
+                              print("work");
+                              Navigator.push(
+                                context, MaterialPageRoute(
+                                  builder: (context) => WorkPage()));
+                            },
+
+                            child: MyText.h3("WORK",
+                            color: Color(0xFF44C4FE),
+                            ),
                           ),
                         ),
                         

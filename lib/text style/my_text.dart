@@ -7,7 +7,12 @@ class MyText extends StatelessWidget {
   final TextAlign? align;
   final Color? color;
   final int? maxLines;
+  final FontWeight? fontWeight;
   final TextOverflow? overflow;
+  final double? fontSize;
+  
+
+
   
 
   const MyText._(
@@ -17,38 +22,51 @@ class MyText extends StatelessWidget {
     this.color,
     this.maxLines,
     this.overflow,
+    this.fontWeight,
+    this.fontSize,
+  
+
     Key? key,
   }) : super(key: key);
 
   // H1
   factory MyText.h1(String text,
-      {TextAlign? align, Color? color, int? maxLines, TextOverflow? overflow}) {
+      {TextAlign? align, Color? color, int? maxLines, TextOverflow? overflow, FontWeight? fontWeight, double? fontSize, }) {  
+
     return MyText._(
       text,
       style: AppTextStyle.h1,
       align: align,
       color: color,
       maxLines: maxLines,
+      fontWeight: fontWeight,
       overflow: overflow,
+      fontSize: fontSize,
+      
+
+
     );
   }
 
   // H2
   factory MyText.h2(String text,
-      {TextAlign? align, Color? color, int? maxLines, TextOverflow? overflow}) {
+      {TextAlign? align, Color? color, int? maxLines, TextOverflow? overflow, FontWeight? fontWeight, double? fontSize}) {
     return MyText._(
       text,
       style: AppTextStyle.h2,
       align: align,
       color: color,
       maxLines: maxLines,
+      fontWeight: fontWeight,
       overflow: overflow,
+      fontSize: fontSize,
+
     );
   }
 
   // H3
   factory MyText.h3(String text,
-      {TextAlign? align, Color? color, int? maxLines, TextOverflow? overflow}) {
+      {TextAlign? align, Color? color, int? maxLines, TextOverflow? overflow, FontWeight? fontWeight, double? fontSize}) {
     return MyText._(
       text,
       style: AppTextStyle.h3,
@@ -56,6 +74,9 @@ class MyText extends StatelessWidget {
       color: color,
       maxLines: maxLines,
       overflow: overflow,
+      fontWeight: fontWeight,
+      fontSize: fontSize,
+
     );
   }
 
